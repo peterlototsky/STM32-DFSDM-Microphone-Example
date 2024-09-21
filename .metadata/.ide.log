@@ -680,3 +680,169 @@
 2024-09-21 11:41:05,914 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 10842mS.
 2024-09-21 11:41:05,920 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 2mS.
 2024-09-21 11:41:05,923 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-09-21 11:45:35,268 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA
+2024-09-21 11:46:30,640 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 710344048 Bytes (1073741824)
+2024-09-21 11:46:31,814 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 737286856 Bytes (1073741824)
+2024-09-21 11:46:34,495 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 888281800 Bytes (1073741824)
+2024-09-21 11:46:34,898 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-09-21 11:46:34,898 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DFSDM
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-09-21 11:46:34,899 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: FATFS
+2024-09-21 11:46:34,900 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.11.1.202404110753//db/
+2024-09-21 11:46:35,058 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-09-21 11:46:35,062 [INFO] Argument:327 - 	 sub Args: 
+2024-09-21 11:46:35,062 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel5
+2024-09-21 11:46:35,062 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel5
+2024-09-21 11:46:35,064 [INFO] Argument:325 - Argument : Initvalue: null
+2024-09-21 11:46:35,064 [INFO] Argument:327 - 	 sub Args: 
+2024-09-21 11:46:35,064 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_0
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_0
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-09-21 11:46:35,065 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2024-09-21 11:46:35,065 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Statevalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Statevalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : hdmavalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:327 - 	 sub Args: 
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel5
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel5
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Initvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:327 - 	 sub Args: 
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_0
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_0
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_HIGH
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Lockvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Lockvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Statevalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Statevalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : Parentvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : Parentvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2024-09-21 11:46:35,067 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : DmaBaseAddressvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : DmaBaseAddressvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : pSyncConfigvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:327 - 	 sub Args: 
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : SyncSignalIDvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : SyncSignalIDvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : SyncPolarityvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : SyncPolarityvalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : SyncEnablevalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : SyncEnablevalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : EventEnablevalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : EventEnablevalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:325 - Argument : RequestNumbervalue: null
+2024-09-21 11:46:35,068 [INFO] Argument:335 - Argument : RequestNumbervalue: null
+2024-09-21 11:46:35,315 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/license.tmp_save
+2024-09-21 11:46:35,431 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/license.tmp
+2024-09-21 11:46:35,514 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/gpio.tmp_save
+2024-09-21 11:46:35,588 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/gpio.tmp
+2024-09-21 11:46:36,492 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-09-21 11:46:36,497 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_HalInit.tmp_save
+2024-09-21 11:46:36,571 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_HalInit.tmp
+2024-09-21 11:46:36,573 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_vars.tmp_save
+2024-09-21 11:46:36,622 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_vars.tmp
+2024-09-21 11:46:36,623 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_ext_vars.tmp_save
+2024-09-21 11:46:36,681 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_ext_vars.tmp
+2024-09-21 11:46:36,682 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_inc.tmp_save
+2024-09-21 11:46:36,732 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_inc.tmp
+2024-09-21 11:46:36,749 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/dma.tmp_save
+2024-09-21 11:46:36,797 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/dma.tmp
+2024-09-21 11:46:36,799 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/dma_GV.tmp_save
+2024-09-21 11:46:36,843 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/dma_GV.tmp
+2024-09-21 11:46:36,854 [INFO] Middleware:1439 - No code input for Bsp Dependency
+2024-09-21 11:46:36,859 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_HalInit.tmp_save
+2024-09-21 11:46:36,902 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_HalInit.tmp
+2024-09-21 11:46:36,904 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_vars.tmp_save
+2024-09-21 11:46:36,945 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_vars.tmp
+2024-09-21 11:46:36,946 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_ext_vars.tmp_save
+2024-09-21 11:46:36,986 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_ext_vars.tmp
+2024-09-21 11:46:36,986 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_inc.tmp_save
+2024-09-21 11:46:37,029 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/fatfs_inc.tmp
+2024-09-21 11:46:37,030 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/Target/ffconf.h_save
+2024-09-21 11:46:37,114 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/Target/ffconf.h
+2024-09-21 11:46:37,115 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/Target/user_diskio.c_save
+2024-09-21 11:46:37,164 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/Target/user_diskio.c
+2024-09-21 11:46:37,166 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/Target/user_diskio.h_save
+2024-09-21 11:46:37,211 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/Target/user_diskio.h
+2024-09-21 11:46:37,213 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/App/fatfs.c_save
+2024-09-21 11:46:37,259 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/App/fatfs.c
+2024-09-21 11:46:37,261 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/App/fatfs.h_save
+2024-09-21 11:46:37,304 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/FATFS/App/fatfs.h
+2024-09-21 11:46:37,310 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Src/stm32l4xx_it.c_save
+2024-09-21 11:46:37,372 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Src/stm32l4xx_it.c
+2024-09-21 11:46:37,373 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Inc/stm32l4xx_it.h_save
+2024-09-21 11:46:37,417 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Inc/stm32l4xx_it.h
+2024-09-21 11:46:37,430 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Src/stm32l4xx_hal_msp.c_save
+2024-09-21 11:46:37,571 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Src/stm32l4xx_hal_msp.c
+2024-09-21 11:46:37,580 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/system.tmp_save
+2024-09-21 11:46:37,694 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/MXTmpFiles/system.tmp
+2024-09-21 11:46:37,715 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Inc/stm32l4xx_hal_conf.h_save
+2024-09-21 11:46:37,785 [INFO] CodeEngine:335 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Inc/stm32l4xx_hal_conf.h
+2024-09-21 11:46:37,901 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Inc/main.h_save
+2024-09-21 11:46:37,968 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Inc/main.h
+2024-09-21 11:46:37,970 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Src/main.c_save
+2024-09-21 11:46:38,072 [INFO] CodeEngine:279 - Generated code: /Users/peterlototsky/Documents/GitHub/stm32DFSDMmicrophoneExample/stm32DFSDMmicrophone/Core/Src/main.c
+2024-09-21 11:46:38,261 [INFO] ProjectBuilder:3163 - Time for Copy HAL[1] : 49mS.
+2024-09-21 11:46:38,270 [INFO] ProjectBuilder:4736 - Project Generator version: 4.3.0-B58
+2024-09-21 11:46:38,330 [INFO] ConfigFileManager:1503 - The Die is : DIE415
+2024-09-21 11:46:39,770 [INFO] ProjectBuilder:5002 - Time for Generating toolchain IDE Files: 1497mS.
+2024-09-21 11:46:39,773 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 1mS.
+2024-09-21 11:46:39,774 [INFO] ProjectBuilder:3034 - Time for Copy CMSIS : 0mS.

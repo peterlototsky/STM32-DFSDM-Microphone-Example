@@ -18,10 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "fatfs.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -31,7 +34,14 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define RECORDING_SIZE_MIC 1000
+#define DFSDM_BUFFER_SIZE 1000
+#define AUDIO_BUFFER_SIZE 1000
+#define HEADER_SIZE 44
 
+#define MAX_RECORDING_LENGTH 128044
+
+#define SaturaLH(N, L, H) (((N)<(L))?(L):(((N)>(H))?(H):(N)))
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -49,7 +59,41 @@ SPI_HandleTypeDef hspi2;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+// General Program
+int error = 0;
 
+// Microphone
+char *recordingPath = "sample.wav";
+int recording_audio = 0;
+int finished_recording = 0;
+int16_t recording[RECORDING_SIZE_MIC];
+int32_t dfsdm_buffer[DFSDM_BUFFER_SIZE * 2];
+
+int mic_transfer_complete = 0;
+int mic_half_transfer = 0;
+int transfer_position = 0;
+int start_recording_process = 0;
+int bytes_written_to_file = 0;
+
+
+uint8_t header_data[] = { //sample Header for 16KHz mono channel audio file
+    0x52, 0x49, 0x46, 0x46, 0x24, 0xE8, 0x03, 0x00,
+    0x57, 0x41, 0x56, 0x45, 0x66, 0x6D, 0x74, 0x20,
+    0x10, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00,
+    0x80, 0x3E, 0x00, 0x00, 0x00, 0x7D, 0x00, 0x00,
+    0x02, 0x00, 0x10, 0x00, 0x64, 0x61, 0x74, 0x61,
+    0x00, 0xE8, 0x03, 0x00
+};
+
+//SD Card Variables
+FATFS       FatFs;
+FRESULT     fres;
+FIL 		file;
+uint32_t 	totalSpace, freeSpace;
+BYTE* 		loaded_song;
+
+UINT bytesWritten;
+UINT bytes_to_record = RECORDING_SIZE_MIC * 2;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -65,7 +109,53 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void start_recording_from_mic(){
+	if (!recording_audio){
+		printf("Starting Recording Process\r\n");
+		if (f_open(&file, recordingPath, FA_WRITE | FA_CREATE_ALWAYS) != FR_OK) {
+			printf("Error opening file for writing.\n\r");
+		}
+		if (f_write(&file, header_data, sizeof(header_data), &bytesWritten) != FR_OK) {
+			printf("Error writing header to file.\n");
+		}
+		recording_audio = 1;
+		start_recording_process = 0;
+	}
+}
 
+void mount_SD_card(void){
+
+    //Mount the SD Card
+	fres = f_mount(&FatFs, "", 1);    //1=mount now
+	if (fres != FR_OK){
+		printf("No SD Card found : (%i)\r\n", fres);
+        return;
+	}
+	printf("SD Card Mounted Successfully\r\n");
+
+    //Read the SD Card Total size and Free Size
+    FATFS *pfs;
+    DWORD fre_clust;
+
+    f_getfree("", &fre_clust, &pfs);
+    totalSpace = (uint32_t)((pfs->n_fatent - 2) * pfs->csize * 0.5);
+    freeSpace = (uint32_t)(fre_clust * pfs->csize * 0.5);
+
+    printf("TotalSpace : %lu bytes, FreeSpace = %lu bytes\r\n", totalSpace, freeSpace);
+
+}
+
+void close_SD_card_song(void){
+	fres = f_close(&file);
+	if (fres != FR_OK) {
+		return;
+	}
+}
+
+void unmount_SD_card(void){
+	f_mount(NULL, "", 0);
+	printf("SD Card Unmounted Successfully\r\n");
+}
 /* USER CODE END 0 */
 
 /**
@@ -101,6 +191,7 @@ int main(void)
   MX_DFSDM1_Init();
   MX_SPI2_Init();
   MX_USART2_UART_Init();
+  MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -112,7 +203,56 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  if (start_recording_process){
+		  start_recording_from_mic();
+	  }
+
+	  if (recording_audio){
+
+		  if (finished_recording || bytes_written_to_file >= MAX_RECORDING_LENGTH){
+			  printf("Finished Recording Audio\r\n");
+			  recording_audio = 0;
+			  finished_recording = 0;
+			  mic_half_transfer = 0;
+			  mic_transfer_complete = 0;
+			  bytes_written_to_file = 0;
+			  f_close(&file);
+			  printf("File Saved\r\n");
+		  }
+
+		  if(mic_half_transfer){
+			  for (int i = 0; i < DFSDM_BUFFER_SIZE; i++){
+				  recording[i] = SaturaLH((dfsdm_buffer[i] >> 8), -32768, 32767);
+			  }
+			  if (f_write(&file, recording, bytes_to_record, &bytesWritten) != FR_OK) {
+				  printf("Error Writing To File 1.\n");
+				  f_close(&file);
+				  return 1;
+			  }
+			  bytes_written_to_file+= DFSDM_BUFFER_SIZE * 2;
+			  mic_half_transfer = 0;
+		  }
+		  else if (mic_transfer_complete){
+			  for (int i = DFSDM_BUFFER_SIZE; i < DFSDM_BUFFER_SIZE * 2; i++){
+				  recording[i - DFSDM_BUFFER_SIZE] = SaturaLH((dfsdm_buffer[i] >> 8), -32768, 32767);
+			  }
+			  if (f_write(&file, recording, bytes_to_record, &bytesWritten) != FR_OK) {
+				  printf("Error Writing to File 2.\n");
+				  f_close(&file);
+				  return 1;
+			  }
+			  bytes_written_to_file+= DFSDM_BUFFER_SIZE * 2;
+			  mic_transfer_complete = 0;
+		  }
+	  }
+
+	  if (error){
+		  printf("There has been an error\r\n Terminating Program\r\n");
+		  unmount_SD_card();
+		  return -1;
+	  }
   }
+  unmount_SD_card();
   /* USER CODE END 3 */
 }
 
@@ -348,6 +488,37 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+#ifdef __GNUC__
+  /* With GCC, small printf (option LD Linker->Libraries->Small printf
+     set to 'Yes') calls __io_putchar() */
+int __io_putchar(int ch)
+#else
+int fputc(int ch, FILE *f)
+#endif /* __GNUC__ */
+{
+  /* Place your implementation of fputc here */
+  /* e.g. write a character to the UART2 and Loop until the end of transmission */
+  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
+  return ch;
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	start_recording_process = 1;
+}
+
+void HAL_DFSDM_FilterRegConvHalfCpltCallback(DFSDM_Filter_HandleTypeDef *hdfsdm_filter)
+{
+	if (recording_audio){
+		mic_half_transfer = 1;
+	}
+
+}
+void HAL_DFSDM_FilterRegConvCpltCallback(DFSDM_Filter_HandleTypeDef *hdfsdm_filter)
+{
+	if( recording_audio){
+		mic_transfer_complete = 1;
+	}
+}
 /* USER CODE END 4 */
 
 /**
