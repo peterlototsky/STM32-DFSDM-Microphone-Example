@@ -27,3 +27,6 @@
    - Click `Finish` after selecting the project in the `Projects` panel.
 
 > **Note:** Please use the latest version of CubeIDE as older versions may not import the project properly.
+
+## References
+Eziya - FatFs Middleware driver: [STM32_SPI_SDCARD](https://github.com/eziya/STM32_SPI_SDCARD)
