@@ -1,5 +1,3 @@
----
-
 # STM32L476RGT6U PDM MEMS Microphone using DFSDM
 
 ## Parts List
@@ -29,7 +27,3 @@
    - Click `Finish` after selecting the project in the `Projects` panel.
 
 > **Note:** Please use the latest version of CubeIDE as older versions may not import the project properly.
-
----
-
-This structure should make your README clear and user-friendly on GitHub.
