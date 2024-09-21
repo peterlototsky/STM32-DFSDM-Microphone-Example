@@ -59,6 +59,7 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define userControl_Pin GPIO_PIN_13
 #define userControl_GPIO_Port GPIOC
+#define userControl_EXTI_IRQn EXTI15_10_IRQn
 #define ChipSelectSD_Pin GPIO_PIN_12
 #define ChipSelectSD_GPIO_Port GPIOB
 

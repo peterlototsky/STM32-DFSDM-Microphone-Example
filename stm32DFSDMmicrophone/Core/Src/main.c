@@ -118,6 +118,7 @@ void start_recording_from_mic(){
 		if (f_write(&file, header_data, sizeof(header_data), &bytesWritten) != FR_OK) {
 			printf("Error writing header to file.\n");
 		}
+		printf("Recording Started\r\n");
 		recording_audio = 1;
 		start_recording_process = 0;
 	}
@@ -193,7 +194,12 @@ int main(void)
   MX_USART2_UART_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
+  printf("Starting Program...\r\n");
+  mount_SD_card();
 
+  if (HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter1, dfsdm_buffer, DFSDM_BUFFER_SIZE * 2) != HAL_OK){
+	  printf("Failed to start DFSDM");
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -227,7 +233,7 @@ int main(void)
 			  if (f_write(&file, recording, bytes_to_record, &bytesWritten) != FR_OK) {
 				  printf("Error Writing To File 1.\n");
 				  f_close(&file);
-				  return 1;
+				  error = 1;
 			  }
 			  bytes_written_to_file+= DFSDM_BUFFER_SIZE * 2;
 			  mic_half_transfer = 0;
@@ -239,7 +245,7 @@ int main(void)
 			  if (f_write(&file, recording, bytes_to_record, &bytesWritten) != FR_OK) {
 				  printf("Error Writing to File 2.\n");
 				  f_close(&file);
-				  return 1;
+				  error = 1;
 			  }
 			  bytes_written_to_file+= DFSDM_BUFFER_SIZE * 2;
 			  mic_transfer_complete = 0;
@@ -481,6 +487,10 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(ChipSelectSD_GPIO_Port, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
