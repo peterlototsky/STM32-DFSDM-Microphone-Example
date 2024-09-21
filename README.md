@@ -28,5 +28,8 @@
 
 > **Note:** Please use the latest version of CubeIDE as older versions may not import the project properly.
 
+## Aditional Information
+For SD Cards greater than 8GB, make a 8GB partition and format as FATFS with a sector size of 4092. Sector sizes greater than 4092 will not work.
+
 ## References
 Eziya - FatFs Middleware driver: [STM32_SPI_SDCARD](https://github.com/eziya/STM32_SPI_SDCARD)
